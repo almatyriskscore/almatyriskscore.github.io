@@ -12,7 +12,6 @@
         <div class="row m-3 g-3 justify-content-center">
             <h5 class="alert alert-primary text-center text-primary">Шкала оценки риска госпитальной летальности у пациентов с острым инфаркта миокарда</h5>
         </div>
-        <h1 class="display-5 text-center text-primary">Калькулятор Скоринга</h1>
 
         <div class="row m-3 g-3 justify-content-center">
             <div class="col-md-6">
@@ -21,13 +20,13 @@
                       <legend class="col-form-label">Пол</legend>
                       <div class="">
                         <div class="radio-inline">
-                          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                          <input class="form-check-input" type="radio" name="gridRadiosGender" id="gridRadios1" value="option1" checked>
                           <label class="form-check-label" for="gridRadios1">
                             Мужчина
                           </label>
                         </div>
                         <div class="radio-inline">
-                          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                          <input class="form-check-input" type="radio" name="gridRadiosGender" id="gridRadios2" value="option2">
                           <label class="form-check-label" for="gridRadios2">
                             Женщина
                           </label>
@@ -41,44 +40,137 @@
         <div class="row m-3 g-3 justify-content-center">
             <div class="col-md-3">
                 <label class="form-label">Уровень гемоглобина</label>
-                <input type="number" class="form-control" id="id_first">
+                <div class="input-group">
+                    <input type="number" class="form-control" id="id_first">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">г/л</div>
+                    </div>
+                </div>
             </div>
             <div class="col-md-3">
                 <label class="form-label">Креатинин сыворотки крови</label>
-                <input type="number" class="form-control" id="id_second">
+                <div class="input-group">
+                    <input type="number" class="form-control" id="id_second">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">мкмоль/л</div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="row m-3 g-3 justify-content-center">
             <div class="col-md-3">
                 <label class="form-label">С реактивный белок</label>
-                <input type="number" class="form-control" id="id_third">
+                <div class="input-group">
+                    <input type="number" class="form-control" id="id_third">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">мг/л</div>
+                    </div>
+                </div>
             </div>
             <div class="col-md-3">
                 <label class="form-label">Фракция выброса ЛЖ</label>
-                <input type="number" class="form-control" id="id_fourth">
+                <div class="input-group">
+                    <input type="number" class="form-control" id="id_fourth">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row m-3 g-3 justify-content-center">
+            <div class="col-md-6">
+                <fieldset class="form-group">
+                    <div class="row">
+                            <legend class="col-form-label">Класс сердечной недостаточности (по классификации killip)</legend>
+                            <select class="form-select" aria-label="Default select example" id="selectFirst">
+                                <option value="1" selected>Отсутствие признаков застойной сердечной недостаточности (I)</option>
+                                <option value="2">Наличие хрипов в легких и/или повышенного давления в югулярных венах (II)</option>
+                                <option value="3">Острый отек легких (III)</option>
+                                <option value="4">Кардиогенный шок (IV)</option>
+                            </select>
+                    </div>
+                </fieldset>
             </div>
         </div>
 
         <div class="row m-3 g-3 justify-content-center">
             <div class="col-md-3">
-                <label class="form-label">Элевация сегмента ST</label>
-                <input type="text" class="form-control" id="id_fifth">
+                <fieldset class="form-group">
+                    <div class="row">
+                        <div class="col-sm>
+                            <legend class="col-form-label">Элевация сегмента ST</legend>
+                            <div class="">
+                                <div class="radio-inline">
+                                <input class="form-check-input" type="radio" name="gridRadiosFirst" id="gridRadios3" value="option1" checked>
+                                <label class="form-check-label" for="gridRadios1">
+                                    Да
+                                </label>
+                                </div>
+                                <div class="radio-inline">
+                                <input class="form-check-input" type="radio" name="gridRadiosFirst" id="gridRadios4" value="option2">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Нет
+                                </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
             </div>
+            
             <div class="col-md-3">
-                <label class="form-label">Поражение ствола</label>
-                <input type="text" class="form-control" id="id_sixth">
+                <fieldset class="form-group">
+                    <div class="row">
+                        <div class="col-sm>
+                            <legend class="col-form-label">Поражение ствола</legend>
+                            <div class="">
+                                <div class="radio-inline">
+                                <input class="form-check-input" type="radio" name="gridRadiosSecond" id="gridRadios5" value="option1" checked>
+                                <label class="form-check-label" for="gridRadios1">
+                                    Да
+                                </label>
+                                </div>
+                                <div class="radio-inline">
+                                <input class="form-check-input" type="radio" name="gridRadiosSecond" id="gridRadios6" value="option2">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Нет
+                                </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
             </div>
         </div>
 
-        <div class="row m-3 g-3 justify-content-center">
+        <div class="row m-3 g-3 justify-content-center"> 
             <div class="col-md-3">
-                <label class="form-label">Cердечная недостаточность</label>
-                <input type="text" class="form-control" id="id_seventh">
+                <fieldset class="form-group">
+                    <div class="row">
+                        <div class="col-sm>
+                            <legend class="col-form-label">Внебольничная пневмония</legend>
+                            <div class="">
+                                <div class="radio-inline">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios9" value="option1" checked>
+                                <label class="form-check-label" for="gridRadios1">
+                                    Да
+                                </label>
+                                </div>
+                                <div class="radio-inline">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios10" value="option2">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Нет
+                                </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
             </div>
+
             <div class="col-md-3">
-                <label class="form-label">Внебольничная пневмония</label>
-                <input type="text" class="form-control" id="id_eighth">
             </div>
         </div>
 
